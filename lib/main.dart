@@ -2,6 +2,7 @@
 
 import 'package:facebook/actionbtn.dart';
 import 'package:facebook/storytile.dart';
+import 'package:facebook/feedbox.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
@@ -134,7 +135,11 @@ class _HomePageState extends State<HomePage> {
                     StoryTile(avatarUrl[0], storyUrl[4], "Ling Cham"),
                   ],
                 ),
-              )
+              ),
+              SizedBox(height: 10),
+              Divider(thickness: 1.5, color: Color(0xFF505050)),
+              feedbox(avatarUrl[0], "Ling Cham", "6 min", "Fck", ""),
+              feedbox(avatarUrl[1], "Jose", "6 min", "Fck", storyUrl[1]),
             ],
           ),
         ),
