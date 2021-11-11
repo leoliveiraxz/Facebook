@@ -1,8 +1,10 @@
+// ignore_for_file: non_constant_identifier_names
+
 import 'package:flutter/material.dart';
 
 Widget StoryTile(String avatarUrl, String storyUrl, String userName) {
   return Container(
-    margin: EdgeInsets.only(right: 20),
+    margin: const EdgeInsets.only(right: 20),
     height: 144,
     width: 120,
     decoration: BoxDecoration(
@@ -13,7 +15,7 @@ Widget StoryTile(String avatarUrl, String storyUrl, String userName) {
         ),
     ),
     child: Padding(
-      padding: EdgeInsets.all(8),
+      padding: const EdgeInsets.all(8),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -26,7 +28,7 @@ Widget StoryTile(String avatarUrl, String storyUrl, String userName) {
           ),
           Text(
             userName,
-            style: TextStyle(
+            style: const TextStyle(
               fontWeight: FontWeight.w800,
               fontSize: 18,
               color: Colors.white,

@@ -8,13 +8,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
       home: HomePage(),
     );
@@ -22,15 +24,17 @@ class MyApp extends StatelessWidget {
 }
 
 class HomePage extends StatefulWidget {
+  const HomePage({Key? key}) : super(key: key);
+
   @override
   _HomePageState createState() => _HomePageState();
 }
 
 class _HomePageState extends State<HomePage> {
-  Color bgBlack = Color(0xFF1a1a1a);
-  Color mainBlack = Color(0xFF262626);
-  Color fbBlue = Color(0xFF2D88FF);
-  Color mainGrey = Color(0xFF505050);
+  Color bgBlack = const Color(0xFF1a1a1a);
+  Color mainBlack = const Color(0xFF262626);
+  Color fbBlue = const Color(0xFF2D88FF);
+  Color mainGrey = const Color(0xFF505050);
   List<String> avatarUrl = [
     "https://64.media.tumblr.com/094dd01752a67223e63d9d5dcd7ac2bb/20881634c261c708-24/s640x960/b35b29c0ad78ea4e692cead4e39d2dd4766cf7fe.jpg"
   ];
@@ -56,17 +60,17 @@ class _HomePageState extends State<HomePage> {
         actions: [
           IconButton(
             onPressed: () {},
-            icon: Icon(Icons.search),
+            icon: const Icon(Icons.search),
           ),
           IconButton(
             onPressed: () {},
-            icon: Icon(Icons.menu),
+            icon: const Icon(Icons.menu),
           )
         ],
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.all(8),
+          padding: const EdgeInsets.all(8),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -87,14 +91,14 @@ class _HomePageState extends State<HomePage> {
                                 radius: 25,
                                 backgroundImage: NetworkImage(avatarUrl[0]),
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 width: 10,
                               ),
                               Expanded(
                                   child: TextField(
-                                style: TextStyle(color: Colors.white),
+                                style: const TextStyle(color: Colors.white),
                                 decoration: InputDecoration(
-                                  contentPadding: EdgeInsets.only(left: 25),
+                                  contentPadding: const EdgeInsets.only(left: 25),
                                   hintText: "Escreva algo...",
                                   filled: true,
                                   fillColor: mainGrey,
@@ -105,23 +109,23 @@ class _HomePageState extends State<HomePage> {
                               ))
                             ],
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 10,
                           ),
                           Row(
                             children: [
                               ActionButton(
-                                  Icons.live_tv, "Live", Color(0xFFF23E5C)),
+                                  Icons.live_tv, "Live", const Color(0xFFF23E5C)),
                               ActionButton(
-                                  Icons.image, "Picture", Color(0xFF58c472)),
+                                  Icons.image, "Picture", const Color(0xFF58c472)),
                               ActionButton(Icons.insert_emoticon, "Activity",
-                                  Color(0xFFF8C03E)),
+                                  const Color(0xFFF8C03E)),
                             ],
                           )
                         ],
                       ))),
-              SizedBox(height: 10),
-              Container(
+              const SizedBox(height: 10),
+              SizedBox(
                 height: 160,
                 width: double.infinity,
                 child: ListView(
@@ -135,7 +139,7 @@ class _HomePageState extends State<HomePage> {
                   ],
                 ),
               ),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
               feedbox(avatarUrl[0], "Ling Cham", "6 min", "Fck", ""),
               feedbox(avatarUrl[0], "Jose", "6 min", "Fck", storyUrl[0]),
             ],
