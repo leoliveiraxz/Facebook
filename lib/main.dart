@@ -108,7 +108,6 @@ class _HomePageState extends State<HomePage> {
                           SizedBox(
                             height: 10,
                           ),
-                          Divider(color: mainGrey, thickness: 1.5),
                           Row(
                             children: [
                               ActionButton(
@@ -137,9 +136,8 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
               SizedBox(height: 10),
-              Divider(thickness: 1.5, color: Color(0xFF505050)),
               feedbox(avatarUrl[0], "Ling Cham", "6 min", "Fck", ""),
-              feedbox(avatarUrl[1], "Jose", "6 min", "Fck", storyUrl[1]),
+              feedbox(avatarUrl[0], "Jose", "6 min", "Fck", storyUrl[0]),
             ],
           ),
         ),

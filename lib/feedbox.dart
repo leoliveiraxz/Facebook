@@ -24,26 +24,24 @@ Widget feedbox(String avatarUrl, String userName, String date,
                   width: 10,
                 ),
                 Expanded(
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(userName,
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 18,
-                              fontWeight: FontWeight.w600)
-                              ),
-                      SizedBox(
-                        height: 5,
-                      ),
-                      Text(userName,
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 16,
-                              fontWeight: FontWeight.w600)
-                              )
-                    ],
+                    child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(userName,
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 18,
+                            fontWeight: FontWeight.w600)),
+                    SizedBox(
+                      height: 5,
+                    ),
+                    Text(date,
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 16,
+                            fontWeight: FontWeight.w600))
+                  ],
                 ))
               ],
             ),
@@ -65,11 +63,12 @@ Widget feedbox(String avatarUrl, String userName, String date,
             SizedBox(
               height: 10,
             ),
+            Divider(thickness: 1.5, color: Color(0xFF505050)),
             Row(
               children: [
                 ActionButton(Icons.thumb_up, "Gostei", Color(0xFF505050)),
-                ActionButton(Icons.thumb_up, "Comentar", Color(0xFF505050)),
-                ActionButton(Icons.thumb_up, "Compartilhar", Color(0xFF505050)),
+                ActionButton(Icons.comment, "Comentar", Color(0xFF505050)),
+                ActionButton(Icons.share, "Compartilhar", Color(0xFF505050)),
               ],
             )
           ],
